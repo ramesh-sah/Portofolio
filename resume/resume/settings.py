@@ -84,11 +84,11 @@ WSGI_APPLICATION = 'resume.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.environ.get("DB_NAME"),
-        'USER': os.environ.get("DB_USER"),
-        'PASSWORD': os.environ.get("DB_PASSWORD"),
-        'HOST': os.environ.get("DB_HOST"),
-        'PORT': os.environ.get("DB_PORT"),
+        'NAME': 'railway',
+        'USER':'postgres',
+        'PASSWORD': 'd0nRSFplkHT5r46zgoX0',
+        'HOST': 'containers-us-west-159.railway.app',
+        'PORT': '7794',
     }
 }
 
