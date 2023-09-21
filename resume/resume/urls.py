@@ -22,7 +22,7 @@ from django.conf.urls.static import static
 from resume import views
 
 urlpatterns = [
-    path('/admin', admin.site.urls),
+    path('admin/', admin.site.urls),
     path('',views.Home, name='home'),
    
     
