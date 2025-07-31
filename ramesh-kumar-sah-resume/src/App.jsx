@@ -149,10 +149,7 @@ const App = () => {
         </motion.div>
       </div>
        <Analytics />
-       <SpeedInsights
-        url="https://rameshkumarsah.com.np"
-        
-      />
+       <SpeedInsights/>
     </div>
 
    
