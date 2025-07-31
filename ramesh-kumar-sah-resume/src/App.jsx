@@ -12,7 +12,7 @@ import Profile from "./assets/profile.jpg";
 
 const App = () => {
   useEffect(() => {
-    document.body.style.zoom = "85%";
+    document.body.style.zoom = "80%";
     return () => {
       document.body.style.zoom = "100%";
     };
