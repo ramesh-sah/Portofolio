@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
+import { Analytics } from '@vercel/analytics/react';
+
 import {
   FaLinkedin,
   FaGithub,
@@ -146,7 +148,10 @@ const App = () => {
           </motion.div>
         </motion.div>
       </div>
+       <Analytics />
     </div>
+
+   
   );
 };
 
