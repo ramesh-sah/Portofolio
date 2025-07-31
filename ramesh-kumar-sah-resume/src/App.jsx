@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Analytics } from "@vercel/analytics/next"
 import { motion } from "framer-motion";
 import {
   FaLinkedin,
