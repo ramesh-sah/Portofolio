@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Analytics } from '@vercel/analytics/react';
-
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import {
   FaLinkedin,
   FaGithub,
@@ -149,6 +149,10 @@ const App = () => {
         </motion.div>
       </div>
        <Analytics />
+       <SpeedInsights
+        url="https://rameshkumarsah.com.np"
+        
+      />
     </div>
 
    
