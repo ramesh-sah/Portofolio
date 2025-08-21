@@ -130,7 +130,7 @@ const App = () => {
               whileHover={{ scale: 1.05, boxShadow: "0 8px 20px rgba(0,0,0,0.2)" }}
               whileTap={{ scale: 0.95 }}
               className="flex items-center gap-2 px-6 py-3 bg-gray-800 text-white rounded-full shadow-xl hover:shadow-2xl transition-all duration-300"
-              onClick={() => window.open("https://drive.google.com/file/d/1tohB5wjKYOaLTRNSQPS_f1JUIrSzkrtF/view?usp=sharing")}
+              onClick={() => window.open("https://drive.google.com/file/d/1hc9Y0C4BXX_8bM-njfZmUr-8DwKkJLcD/view?usp=sharing")}
             >
               <FaDownload className="w-5 h-5" />
               <span className="text-sm">Download Resume</span>
