@@ -220,6 +220,9 @@ const App = () => {
           </motion.div>
         </motion.div>
       </div>
+      <a href="/sitemap.xml">Sitemap</a> 
+      <a href="/robots.txt">Robots.txt</a>
+  
       
       <Analytics />
       <SpeedInsights/>
