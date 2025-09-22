@@ -136,7 +136,7 @@ const App = () => {
               }}
             >
               <p className="text-center text-gray-700 leading-relaxed tracking-wide text-base md:text-lg">
-                Hello, I am Ramesh Kumar Sah, a recent 2025 BSc graduate in Computer Science and Software Engineering from Patan College for Professional Studies, affiliated with the University of Bedfordshire, UK.
+                I am Ramesh Kumar Sah, a  BSc graduate in Computer Science and Software Engineering from Patan College for Professional Studies, affiliated with the University of Bedfordshire, UK.
                 <br className="hidden md:block" /><br className="hidden md:block" />
                 I specialize in full-stack development using React.js, Laravel, and Django, with strong proficiency in my core programming languages: PHP, Python, JavaScript, C#, Java and SQL. I'm also passionate about AI/ML with hands-on experience in TensorFlow, Keras, Scikit-learn, NumPy, Seaborn, Pandas, Matplotlib, OpenCV, Scrapy, and BeautifulSoup.
                 <br className="hidden md:block" /><br className="hidden md:block" />
