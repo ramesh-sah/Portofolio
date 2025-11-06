@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 ---
+
 <Layout>
 <body class="index-page">
 
@@ -502,7 +503,7 @@ import Layout from '../layouts/Layout.astro';
                     <div class="portfolio-actions">
                       <a href="assets/img/portfolio/portfolio-2.webp" class="glightbox preview-link" data-gallery="portfolio-gallery-web"><i class="bi bi-eye"></i></a>
                       <a href="#" class="details-link"><i class="bi bi-arrow-right"></i></a>
-                </div>
+                    </div>
                   </div>
                 </div>
                 <div class="portfolio-content">
@@ -721,7 +722,7 @@ import Layout from '../layouts/Layout.astro';
                 <i class="bi bi-envelope"></i>
               </div>
               <h3>Email</h3>
-              <p>ramesh@example.com</p>
+              <p>rsah3798@gmail.com</p>
             </div>
           </div>
 
@@ -731,7 +732,7 @@ import Layout from '../layouts/Layout.astro';
                 <i class="bi bi-phone"></i>
               </div>
               <h3>Call</h3>
-              <p>+977 98XXXXXXXX</p>
+              <p>+977 9862981898</p>
             </div>
           </div>
         </div>
@@ -739,7 +740,7 @@ import Layout from '../layouts/Layout.astro';
         <div class="row">
           <div class="col-lg-12">
             <div class="form-wrapper" data-aos="fade-up" data-aos-delay="400">
-              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <form id="contact-form" class="php-email-form">
                 <div class="row">
                   <div class="col-md-6 form-group">
                     <div class="input-group">
@@ -783,12 +784,12 @@ import Layout from '../layouts/Layout.astro';
                     </div>
                   </div>
                   <div class="my-3">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
+                    <div class="loading" style="display: none;">Loading...</div>
+                    <div class="error-message" style="display: none;"></div>
+                    <div class="sent-message" style="display: none;">Your message has been sent. Thank you!</div>
                   </div>
                   <div class="text-center">
-                    <button type="submit">Send Message</button>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
                   </div>
 
                 </div>
@@ -813,8 +814,8 @@ import Layout from '../layouts/Layout.astro';
           </a>
           <div class="footer-contact pt-3">
             <p>Full Stack Developer | AI/ML Enthusiast | Cloud Practitioner</p>
-            <p class="mt-3"><strong>Email:</strong> <span>ramesh@example.com</span></p>
-            <p><strong>Phone:</strong> <span>+977 98XXXXXXXX</span></p>
+            <p class="mt-3"><strong>Email:</strong> <span>rsah3798@gmail.com</span></p>
+            <p><strong>Phone:</strong> <span>+977 9862981898</span></p>
           </div>
           <div class="social-links d-flex mt-4">
             <a href="https://www.linkedin.com/in/ramesh-kumar-sah-42b09b224/" target="_blank"><i class="bi bi-linkedin"></i></a>
@@ -884,6 +885,56 @@ import Layout from '../layouts/Layout.astro';
   <!-- Preloader -->
   <div id="preloader"></div>
 
+  
+
 </body>
 
+
 </Layout>
+<!-- Contact Form Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('contact-form');
+      const loading = document.querySelector('.loading');
+      const errorMessage = document.querySelector('.error-message');
+      const successMessage = document.querySelector('.sent-message');
+
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        // Show loading state
+        loading.style.display = 'block';
+        errorMessage.style.display = 'none';
+        successMessage.style.display = 'none';
+        
+        // Get form data
+        const formData = new FormData(form);
+        
+        try {
+          const response = await fetch('/api/contact', {
+            method: 'POST',
+            body: formData
+          });
+          
+          const result = await response.json();
+          
+          if (result.success) {
+            // Show success message
+            successMessage.style.display = 'block';
+            form.reset();
+          } else {
+            // Show error message
+            errorMessage.textContent = result.error || 'Failed to send message. Please try again.';
+            errorMessage.style.display = 'block';
+          }
+        } catch (error) {
+          // Show error message
+          errorMessage.textContent = 'An error occurred. Please try again.';
+          errorMessage.style.display = 'block';
+        } finally {
+          // Hide loading state
+          loading.style.display = 'none';
+        }
+      });
+    });
+  </script>
