@@ -19,18 +19,17 @@ export async function POST({ request }) {
     }
 
     // Gmail SMTP transporter with hardcoded credentials
-    // Note: If you have 2-factor authentication enabled, use an App Password instead of your regular password
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "rsah3798@gmail.com", // Replace with your Gmail address
-        pass: "wuwpyqqrrnlmiyhl", // Replace with your Gmail password or App Password
+        user: "rsah3798@gmail.com",
+        pass: "wuwpyqqrrnlmiyhl",
       },
     });
 
     const mailOptions = {
       from: email,
-      to: "rsah3798@gmail.com", // Replace with your Gmail address
+      to: "rsah3798@gmail.com",
       subject: `New Contact from ${name}: ${subject}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
