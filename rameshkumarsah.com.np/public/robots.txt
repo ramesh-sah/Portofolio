@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.rameshkumarsah.com.np
+
+# Sitemaps
+Sitemap: https://www.rameshkumarsah.com.np/sitemap.xml
