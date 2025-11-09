@@ -1,5 +1,7 @@
 ---
 import SpeedInsights from "@vercel/speed-insights/astro";
+import Analytics from '@vercel/analytics/astro';
+
 ---
 
 <!doctype html>
@@ -24,6 +26,9 @@ import SpeedInsights from "@vercel/speed-insights/astro";
   <meta name="googlebot" content="index, follow" />
   <meta name="rating" content="general" />
   <link rel="canonical" href="https://www.rameshkumarsah.com.np/" />
+  <!-- vercel  -->
+   <SpeedInsights />
+   <Analytics/>
 
   <!-- 📌 Sitemap and Robots -->
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
