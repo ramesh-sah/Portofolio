@@ -60,8 +60,8 @@ import Analytics from '@vercel/analytics/astro';
 
   <!-- ✅ Google Analytics / GA4 (replace G-XXXXXXXXXX) -->
  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1G9NG1PQ93"></script>
-<script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1G9NG1PQ93" is:inline></script>
+<script is:inline>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
@@ -71,13 +71,14 @@ import Analytics from '@vercel/analytics/astro';
 
   <!-- ✅ Google Tag Manager (optional, replace GTM-XXXXXXX) -->
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-R68TBB290H"></script>
-<script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1G9NG1PQ93" is:inline></script>
+<script is:inline>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-R68TBB290H');
+  gtag('config', 'G-1G9NG1PQ93');
 </script>
 
   <!-- ✅ Google Site Verification -->
@@ -97,7 +98,7 @@ import Analytics from '@vercel/analytics/astro';
        🏢 STRUCTURED DATA (SCHEMA)
   ============================== -->
 
-  <script type="application/ld+json">
+  <script type="application/ld+json" is:inline>
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
@@ -159,7 +160,7 @@ import Analytics from '@vercel/analytics/astro';
   <!-- =============================
        ⚡️ PERFORMANCE SCRIPT
   ============================== -->
-  <script>
+  <script is:inline>
     // Lazy load non-critical scripts
     window.addEventListener("load",()=> {
       const s = document.createElement("script");
