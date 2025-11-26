@@ -14,5 +14,6 @@ export default defineConfig({
   output: 'server',
   adapter: vercel(),
   site: 'https://rameshkumarsah.com.np',
+  mode: 'hybrid',
 
 });
