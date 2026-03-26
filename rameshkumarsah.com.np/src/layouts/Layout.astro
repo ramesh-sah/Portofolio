@@ -58,7 +58,15 @@ import Analytics from '@vercel/analytics/astro';
        📊 ANALYTICS & VERIFICATION
   ============================== -->
 
- 
+ <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1G9NG1PQ93"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1G9NG1PQ93');
+</script>
 
 
 
@@ -167,15 +175,7 @@ import Analytics from '@vercel/analytics/astro';
   <link href="/assets/css/main.css" rel="stylesheet">
 
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1G9NG1PQ93"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-1G9NG1PQ93');
-</script>
     <body>
         
         <slot />
